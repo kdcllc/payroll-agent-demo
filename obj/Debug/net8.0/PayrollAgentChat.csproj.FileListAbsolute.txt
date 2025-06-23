@@ -62,3 +62,4 @@ D:\source\GitHub\PlagueHO\payroll-agent-demo\obj\Debug\net8.0\refint\PayrollAgen
 D:\source\GitHub\PlagueHO\payroll-agent-demo\obj\Debug\net8.0\PayrollAgentChat.pdb
 D:\source\GitHub\PlagueHO\payroll-agent-demo\obj\Debug\net8.0\PayrollAgentChat.genruntimeconfig.cache
 D:\source\GitHub\PlagueHO\payroll-agent-demo\obj\Debug\net8.0\ref\PayrollAgentChat.dll
+D:\source\GitHub\PlagueHO\payroll-agent-demo\obj\Debug\net8.0\PayrollAgentChat.sourcelink.json
