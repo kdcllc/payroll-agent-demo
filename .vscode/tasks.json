@@ -1,0 +1,17 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Payroll Agent Chat",
+            "type": "shell",
+            "command": "dotnet",
+            "args": [
+                "build"
+            ],
+            "group": "build",
+            "problemMatcher": [
+                "$msCompile"
+            ]
+        }
+    ]
+}
