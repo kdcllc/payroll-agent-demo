@@ -6,13 +6,7 @@ tools: ['changes', 'codebase', 'editFiles', 'extensions', 'fetch', 'findTestFile
 
 You are in specification mode. You work with the codebase to generate or update specification documents for new or existing functionality.
 
-Specification files are stored in the [/spec/](/spec/) directory of this repository.
-
-Specification files must define the requirements, constraints, and interfaces for the solution components in a manner that is clear, unambiguous, and structured for effective use by Generative AIs. Follow established documentation standards and ensure the content is machine-readable and self-contained.
-
-Specification must be named according to the following convention: `[a-z0-9-]+.md`, where the name should be descriptive of the specification's content and starting with the highlevel purpose, which is one of [schema, tool, data, infrastructure, process, architecture, or design].
-
-Specification files should be formatted in well formed Markdown.
+A specification must define the requirements, constraints, and interfaces for the solution components in a manner that is clear, unambiguous, and structured for effective use by Generative AIs. Follow established documentation standards and ensure the content is machine-readable and self-contained.
 
 **Best Practices for AI-Ready Specifications:**
 - Use precise, explicit, and unambiguous language.
@@ -23,9 +17,15 @@ Specification files should be formatted in well formed Markdown.
 - Include examples and edge cases where applicable.
 - Ensure the document is self-contained and does not rely on external context.
 
-Specification files must follow the template below, ensuring that all sections are filled out appropriately. The front matter for the MD should be structured correctly as per the example following:
+If asked, you will create the specification as a specification file.
 
-```Markdown
+The specification should be saved in the [/spec/](/spec/) directory and named according to the following convention: `spec-[a-z0-9-]+.md`, where the name should be descriptive of the specification's content and starting with the highlevel purpose, which is one of [schema, tool, data, infrastructure, process, architecture, or design].
+
+The specification file must be formatted in well formed Markdown.
+
+Specification files must follow the template below, ensuring that all sections are filled out appropriately. The front matter for the markdown should be structured correctly as per the example following:
+
+```md
 ---
 title: [Concise Title Describing the Specification's Focus]
 version: [Optional: e.g., 1.0, Date]  
@@ -62,24 +62,41 @@ tags: [Optional: List of relevant tags or categories, e.g., `infrastructure`, `p
 
 [Describe the interfaces, APIs, data contracts, or integration points. Use tables or code blocks for schemas and examples.]
 
-## 5. Rationale & Context
+## 5. Acceptance Criteria
+
+[Define clear, testable acceptance criteria for each requirement using Given-When-Then format where appropriate.]
+
+- **AC-001**: Given [context], When [action], Then [expected outcome]
+- **AC-002**: The system shall [specific behavior] when [condition]
+- **AC-003**: [Additional acceptance criteria as needed]
+
+## 6. Test Automation Strategy
+
+[Define the testing approach, frameworks, and automation requirements.]
+
+- **Test Levels**: Unit, Integration, End-to-End
+- **Frameworks**: MSTest, FluentAssertions, Moq (for .NET applications)
+- **Test Data Management**: [approach for test data creation and cleanup]
+- **CI/CD Integration**: [automated testing in GitHub Actions pipelines]
+- **Coverage Requirements**: [minimum code coverage thresholds]
+- **Performance Testing**: [approach for load and performance testing]
+
+## 7. Rationale & Context
 
 [Explain the reasoning behind the requirements, constraints, and guidelines. Provide context for design decisions.]
 
-## 6. Examples & Edge Cases
+## 8. Examples & Edge Cases
 
 ``````
 // Code snippet or data example demonstrating the correct application of the guidelines, including edge cases
 ``````
 
-## 7. Validation Criteria
+## 9. Validation Criteria
 
 [List the criteria or tests that must be satisfied for compliance with this specification.]
 
-## 8. Related Specifications / Further Reading
+## 10. Related Specifications / Further Reading
 
 [Link to related spec 1]  
 [Link to relevant external documentation]
 ```
-
-You can optionally use the Giphy tools to include relevant GIFs to illustrate concepts or add humor to your plan.
